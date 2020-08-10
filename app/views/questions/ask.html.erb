@@ -1,0 +1,10 @@
+<!-- First page with a form - a user can type a question to ask the Coach -->
+<!-- After submiting the form, the user will be redirected to another page - answer -->
+<h1>Stupid Coaching</h1>
+
+<form action="/answer" method="get">
+  <!-- With this input the user will be redirected to /answer?question=question_asked_by_user -->
+  <label for="question">Ask your coach anything:</label>
+  <input type="text" name="question" id="question">
+  <input type="submit" value="Ask" id="button">
+</form>

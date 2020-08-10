@@ -1,0 +1,33 @@
+<!-- Will display the question asked and the answer form the coach -->
+<h1>Stupid Coach</h1>
+<!-- Question -->
+<div id="box">
+  <div class="inner-box">
+    <p><%=@question%></p>
+    <p class="italic">-You</p>
+  </div>
+</div>
+
+<!-- Answer -->
+<div id="yellow">
+  <div class="inner-box">
+    <p>
+      <% if @question == 'Hello' %>
+        <%= 'Hello' %>
+      <% elsif @question.include? 'time' %>
+        <%= @time_answer %>
+      <% elsif @question == 'I am going to work' %>
+        <%= 'Great!' %>
+      <% elsif @question.include? '?' %>
+        <%= 'Silly question, get dressed and go to work!' %>
+      <% else %>
+        <% "I don't care, get dressed and go to work!" %>
+      <% end %>
+    </p>
+    <p class="italic">-Your Coach</p>
+  </div>
+</div>
+
+
+<!-- This links as back to the ask page -->
+<%= link_to 'ask', ask_path %>
